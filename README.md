@@ -1,11 +1,11 @@
 # Algorithm
 
-Dynamic Programming
+## Dynamic Programming
 
 
-Bit Manipulation
+## Bit Manipulation
 
 
-String Alorithm
-  - Suffix Array (Pattern Matching)
-  - Z-Algorithm (Pattern Matching)
+## String Alorithm
+    - Suffix Array (Pattern Matching)
+    - Z-Algorithm (Pattern Matching)
