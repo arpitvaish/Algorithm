@@ -7,5 +7,5 @@ Bit Manipulation
 
 
 String Alorithm
-  - 
-  - Z-Algorithm (String searching)
+  - Suffix Array (Pattern Matching)
+  - Z-Algorithm (Pattern Matching)
