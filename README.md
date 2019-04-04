@@ -7,5 +7,5 @@
 
 
 ## String Alorithm
-    - Suffix Array (Pattern Matching)
-    - Z-Algorithm (Pattern Matching)
+    - Suffix Array
+    - Z-Algorithm
