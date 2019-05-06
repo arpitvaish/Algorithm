@@ -1,7 +1,4 @@
 //https://algs4.cs.princeton.edu/99misc/SegmentTree.java.html
-SegmentTree.java
-
-Below is the syntax highlighted version of SegmentTree.java from §9.9 Miscellaneous.
 
 
 /******************************************************************************
@@ -338,5 +335,3 @@ public class SegmentTree {
 }
 
 
-Copyright © 2000–2017, Robert Sedgewick and Kevin Wayne. 
-Last updated: Fri May 11 06:35:49 EDT 2018.
