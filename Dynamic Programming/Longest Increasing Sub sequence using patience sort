@@ -5,38 +5,51 @@ https://www.hackerrank.com/challenges/longest-increasing-subsequent/problem
 
 
 */
+package com.pCodeFix.solutions;
+
 import java.io.IOException;
 import java.util.Scanner;
 
 public class Solution {
 
+    static int CeilIndex(int A[], int l, int r, int key)
+    {
+        while (r - l > 1) {
+            int m = l + (r - l) / 2;
+            if (A[m] >= key)
+                r = m;
+            else
+                l = m;
+        }
+
+        return r;
+    }
     // Complete the longestIncreasingSubsequence function below.
     static int longestIncreasingSubsequence(int[] arr) {
 
-        int[] subsequence = new int[arr.length + 1];
-        int[] parent = new int[arr.length];
-        int lenght = 0;
 
-        for (int i = 1; i < arr.length; i++) {
-            int low = 1, high = lenght;
-            while (low <= high) {
-                int mid = (int) Math.ceil((low + high) / 2);
-                if (subsequence[mid] < arr[i]) {
-                    low = mid + 1;
-                } else {
-                    high = mid - 1;
-                }
-            }
+        int size = arr.length;
+        int[] tailTable = new int[size];
+        int len; // always points empty slot
 
-            int pos = low;
-            parent[i] = subsequence[pos - 1];
-            subsequence[pos] = i;
+        tailTable[0] = arr[0];
+        len = 1;
+        for (int i = 1; i < size; i++) {
+            if (arr[i] < tailTable[0])
+                // new smallest value
+                tailTable[0] = arr[i];
 
-            if (pos > lenght)
-                lenght = pos;
+            else if (arr[i] > tailTable[len - 1])
+                // A[i] wants to extend largest subsequence
+                tailTable[len++] = arr[i];
 
+            else
+                // A[i] wants to be current end candidate of an existing
+                // subsequence. It will replace ceil value in tailTable
+                tailTable[CeilIndex(tailTable, -1, len - 1, arr[i])] = arr[i];
         }
-        return lenght-1;
+
+        return len;
     }
 
     private static final Scanner scanner = new Scanner(System.in);
