@@ -1,4 +1,4 @@
-//Kosaraju
+//Kosaraju => https://practice.geeksforgeeks.org/problems/strongly-connected-components-kosarajus-algo/1#
 
 // { Driver Code Starts
 //Initial Template for Java
